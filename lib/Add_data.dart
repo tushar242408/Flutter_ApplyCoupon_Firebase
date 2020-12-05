@@ -128,7 +128,7 @@ print(date);
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Add(a:"Your Data Is Added")));
                   }else{
                     AlertDialog dialog=AlertDialog(
-                      content: new Text("please input all field"),
+                      content: new Text("please input in all field's"),
                     );
                     showDialog(context:context,child:dialog);
                   }
