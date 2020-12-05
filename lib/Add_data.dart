@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'fire.dart';
 import 'main.dart';
 class Add extends StatefulWidget {
+  var a;
+  Add({this.a=""});
   @override
   _AddState createState() => _AddState();
 }
@@ -121,9 +123,17 @@ print(date);
             children: [
               GestureDetector(
                 onTap: () {
-                  Adddata();
+                  if(name!=null && data!=null && Discount!=null && d!=null) {
+                    Adddata();
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Add(a:"Your Data Is Added")));
+                  }else{
+                    AlertDialog dialog=AlertDialog(
+                      content: new Text("Wrong Coupan!"),
+                    );
+                    showDialog(context:context,child:dialog);
+                  }
 
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Add()));},
+                 },
                 child: Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
@@ -147,6 +157,9 @@ print(date);
               ),
             ],
           ),
+
+              SizedBox(height: 10),
+              Text("${widget.a}"),
         ]),
 
 

@@ -36,8 +36,7 @@ class _MyAppState extends State<MyApp> {
     var date1=DateTime.now();
 
     var date2=DateTime.parse(widget.date);
-
-    if(date1.year<=date2.year && date1.month<=date2.month && date1.day<=date2.day && date1.hour<=date2.hour ){
+    if(!(date2.difference(date1).isNegative)){
       widget.Discount=widget.Discount;
       setState(() {
         k=10;
