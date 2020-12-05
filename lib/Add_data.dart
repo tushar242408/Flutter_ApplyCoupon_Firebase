@@ -128,7 +128,7 @@ print(date);
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Add(a:"Your Data Is Added")));
                   }else{
                     AlertDialog dialog=AlertDialog(
-                      content: new Text("Wrong Coupan!"),
+                      content: new Text("please input all field"),
                     );
                     showDialog(context:context,child:dialog);
                   }
@@ -158,8 +158,8 @@ print(date);
             ],
           ),
 
-              SizedBox(height: 10),
-              Text("${widget.a}"),
+              SizedBox(height: 20),
+              Text("${widget.a}",style:TextStyle(fontSize:18,color:Colors.greenAccent)),
         ]),
 
 
